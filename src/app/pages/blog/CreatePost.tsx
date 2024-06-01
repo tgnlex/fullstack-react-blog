@@ -1,6 +1,6 @@
 //mport { useNavigate } from "react-router-dom";
-import { PostForm } from "./PostForm";
-const Create = () => {
+import { PostForm } from "./components/newForm";
+const CreatePost = () => {
  // const navigate = useNavigate();
   return (
     <>
@@ -11,4 +11,4 @@ const Create = () => {
     </>
   )
 };
-export {Create};
+export {CreatePost};
