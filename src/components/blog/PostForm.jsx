@@ -1,16 +1,27 @@
-import {FormEvent, useState} from 'react'
+import { useState} from 'react'
+import { useNavigate } from 'react-router-dom';
+import {addPost} from '../../api/addPost';
+import {formatDate} from '../../lib/date';
 
 function PostForm() {
   const [title, setTitle] = useState("");
-const [content, setContent] = useState("");
-const handleSubmit = (e: FormEvent) => {
-  e.preventDefault();
-  console.log({title, content});
-  setContent("");
-  setTitle("");
-}
+  const [content, setContent] = useState("");
+  const navigate = useNavigate();
+  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    addPost(
+      localStorage.getItem("u_id"),
+      title, 
+      content, 
+      formatDate(),
+      navigate
+    );
+    setContent("");
+    setTitle("");
+  }
   return (
-    <form className="newPost-form" onSubmit={handleSubmit}>
+    <form className="post-form" onSubmit={handleSubmit}>
       <label htmlFor="title" className="title-label">Title</label>
       <input 
         type="text"

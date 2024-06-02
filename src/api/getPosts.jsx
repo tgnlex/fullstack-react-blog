@@ -1,4 +1,5 @@
-export const fetchAllPosts = (setLoading, setPosts) => {
+
+const fetchAllPosts = (setLoading, setPosts) => {
   fetch("https://localhost:4000/api/posts")
     .then((res) => res.json())
     .then((data) => {
@@ -7,3 +8,5 @@ export const fetchAllPosts = (setLoading, setPosts) => {
     })
     .catch((err) => console.error(err));
 }
+
+export {fetchAllPosts};

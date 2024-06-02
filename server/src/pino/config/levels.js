@@ -1,7 +1,8 @@
 const levels = {
   meta: 0, 
-  signal: 10,
-  http: 20,
+  signal: 10,  
+  data: 15, 
+  http: 20,  
   info: 30, 
   event: 40,
   notice: 50,

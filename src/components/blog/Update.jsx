@@ -17,7 +17,11 @@ const UpdatePost = () => {
   };
   return (
     <div>
-      <input value={content} onChange={(event) => setContent(event.target.value)} />
+      <input 
+        id="update-content"
+        value={content} 
+        onChange={(event) => setContent(event.target.value)} 
+      />
       <button onClick={handleSubmit} disabled={isPending} />
       {error && <p>{error}</p>}
     </div>

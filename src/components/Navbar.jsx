@@ -1,5 +1,5 @@
 import {Link} from 'react-router-dom';
-const Menu = (children?: JSX.Element) => {
+const Menu = () => {
   return (
     <nav id="sidebar">
       <menu id="menu">
@@ -9,9 +9,6 @@ const Menu = (children?: JSX.Element) => {
         <Link id="blog" to="/blog" className="link">
           <h2>Blog</h2>
         </Link>
-        <div id="children">
-          {children}
-        </div>
       </menu>
     </nav>
   )
